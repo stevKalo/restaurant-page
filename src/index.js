@@ -1,3 +1,7 @@
 import "./style.css";
+import createHome from "./home";
 
-console.log("I'm still still in");
+const homeBtn = document.getElementById("home");
+
+homeBtn.onclick = createHome();
+console.log(homeBtn);

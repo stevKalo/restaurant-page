@@ -6,7 +6,9 @@ module.exports = {
   entry: "./src/index.js",
   devtool: "inline-source-map",
   devServer: {
-    static: "./src",
+    static: "./dist",
+    hot: true,
+    open: true,
   },
   output: {
     filename: "main.js",
@@ -18,6 +20,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
+      inject: "head",
+      scriptLoading: "defer",
     }),
   ],
   module: {

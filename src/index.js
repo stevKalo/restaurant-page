@@ -1,5 +1,6 @@
 import "./style.css";
 import createHome from "./home";
+import createMenu from "./menu";
 
 function clearPage() {
   const body = document.getElementById("body");
@@ -17,4 +18,5 @@ homeBtn.onclick = () => {
 const menuBtn = document.getElementById("menu");
 menuBtn.onclick = () => {
   clearPage();
+  createMenu();
 };
